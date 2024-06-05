@@ -3,11 +3,7 @@ import styles from "../styles/Header.css";
 
 const Header = () => {
   
-  const formatDate = () => {
-    const options = { year: 'numeric', month: 'short', day: '2-digit' };
-    const today = new Date();
-    return today.toLocaleDateString('en-US', options);
-  };
+  
 
   return (
     <header className="header">
@@ -17,12 +13,12 @@ const Header = () => {
           <option value="weekly">Weekly</option>
           <option value="monthly">Monthly</option>
         </select>
-        <span className="date-range">{formatDate()}</span> 
+        
       </div>
       <div className="overview">
-        <div className="metric">Total Earnings: $54.36</div>
-        <div className="metric">Total Spent: $23.63</div>
-        <div className="metric">Total Posts: 72</div>
+        <div className="metric">Total Earnings: <span className='large-number'>$54.36</span></div>
+        <div className="metric">Total Spent:<span className='large-number'>$23.63</span> </div>
+        <div className="metric">Total Posts:<span className='large-number'>72</span> </div>
       </div>
     </header>
   );
